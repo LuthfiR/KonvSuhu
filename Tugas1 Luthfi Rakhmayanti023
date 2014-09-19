@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+main(void)
+{
+    float hasil, suhu;
+    int satuan;
+
+    printf("\n\a\tK O N V E R S I  S U H U\n\n\n");
+    puts(">Pilih satuan :\t1=Celcius");
+    puts("\t\t2=Fahrenheit");
+    puts("\t\t3=Reamur");
+
+        printf("\n>Pilih nomor satuan suhu : ");
+        scanf("%i", &satuan);
+
+        switch(satuan)
+        {
+            case 1:puts("\t\a'Celcius'");
+                    printf("\n>Masukkan besar suhu : ");
+                    scanf("%f", &suhu);
+
+                        hasil = (1.8*suhu)+32;
+                        printf("\aDalam Fahrenheit : %4.2f\n", hasil);
+
+                        hasil = 0.8*suhu;
+                        printf("Dalam Reamur\t : %4.2f\n", hasil);
+
+                    printf("\n\nSilahkan tekan tombol 'Esc' setelah hasil muncul\n");
+            break;
+
+            case 2:puts("\t\a'Fahrenheit'");
+                    printf("\n>Masukkan besar suhu : ");
+                    scanf("%f", &suhu);
+
+                        hasil = 0.56*(suhu-32);
+                        printf("\aDalam Celcius : %4.2f\n", hasil);
+
+                        hasil = 0.4*(suhu-32);
+                        printf("Dalam Reamur  : %4.2f\n", hasil);
+
+                    printf("\n\nSilahkan tekan tombol 'Esc' setelah hasil muncul\n");
+            break;
+
+            case 3:puts("\t\a'Reamur'");
+                    printf("\n>Masukkan besar suhu : ");
+                    scanf("%f", &suhu);
+
+                        hasil = 1.25*suhu;
+                        printf("\aDalam Celcius\t : %4.2f\n", hasil);
+
+                        hasil = (2.25*suhu)+32;
+                        printf("Dalam Fahrenheit : %4.2f\n", hasil);
+
+                    printf("\n\nSilahkan tekan tombol 'Esc' setelah hasil muncul\n");;
+            break;
+
+            default:puts("\n\a\a\a\aNomor pilihan salah! Silahkan tekan tombol 'Esc'!\n\a\a\a\a");
+        }
+    printf("\n\nluthfir-023\n\n");
+}
